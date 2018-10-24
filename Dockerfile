@@ -6,9 +6,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # Install r10k
-ENV R10K_VERSION='2.4.5+RK-291-forge_module_caching'
-RUN gem install specific_install --no-ri --no-rdoc \
-  && gem specific_install -l https://github.com/camptocamp/r10k.git -b $R10K_VERSION
+ENV R10K_VERSION='2.6.5'
+RUN gem install r10k --version $R10K_VERSION --no-ri --no-rdoc
 
 # Configure .ssh directory
 RUN mkdir /root/.ssh \
