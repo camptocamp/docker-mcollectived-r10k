@@ -12,5 +12,5 @@ cat << EOF > /etc/puppetlabs/r10k/r10k.yaml
   :main:
     remote: '${REMOTE}'
     basedir: '/etc/puppetlabs/code/environments'
-:postrun: [ '/opt/puppetlabs/bin/puppet', 'generate', 'types', '--environment', '$environment' ]
+:postrun: [ '/opt/puppetlabs/bin/puppet', 'generate', 'types', '--environment', '\$environment' ]
 EOF
